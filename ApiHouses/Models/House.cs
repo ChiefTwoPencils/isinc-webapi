@@ -11,6 +11,11 @@ namespace ApiHouses.Models
         public string City { get; set; }
         public decimal Price { get; set; }
 
+        public House()
+        {
+
+        }
+
         public House(int id, string city, decimal price) {
             Id = id;
             City = city;
