@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiHouses", "ApiHouses\ApiH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseDemo", "HouseDemo\HouseDemo.csproj", "{6BB143FD-16E1-4D13-9399-E55D74BC297E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateHouse", "ValidateHouse\ValidateHouse.csproj", "{5E3ADA3A-340B-4523-BB38-276527A2D21D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6BB143FD-16E1-4D13-9399-E55D74BC297E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BB143FD-16E1-4D13-9399-E55D74BC297E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BB143FD-16E1-4D13-9399-E55D74BC297E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E3ADA3A-340B-4523-BB38-276527A2D21D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E3ADA3A-340B-4523-BB38-276527A2D21D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E3ADA3A-340B-4523-BB38-276527A2D21D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E3ADA3A-340B-4523-BB38-276527A2D21D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

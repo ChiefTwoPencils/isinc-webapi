@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mortgage App</title>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        function calc() {
+            var mort = {
+                Amount: $('#txtAmount').val(),
+                Rate: $('#txtRate').val(),
+                Years: $('#txtYears').val()
+            };
+            $.ajax({
+                url: 'api/mortgage',
+                type: 'POST',
+                data: JSON.stringify(mort),
+                contentType: "application/json;charset=utf-8",
+                success: function (result) {
+                    $('#result').text(result);
+                },
+                error: function (jqXHR, textStatus, err) {
+                    alert(jqXHR + '\n' + textStatus + '\n' + err);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Mortgage Data</h2>
+        Amount: <input type="text" id="txtAmount" size="5" value="200000"/><br />
+        Rate: <input type="text" id="txtRate" size="5" value="5"/><br />
+        Years: <input type="text" id="txtYears" size="5" value="20" /><p />
+    </div>
+
+    <div>
+        <input type="button" value="Calculate" onclick="calc();" />
+        <p />
+        Monthly Payment: <span id="result" />
+   </div>
+</body>
+</html>
