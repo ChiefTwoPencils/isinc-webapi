@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringApiClient", "StringAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcStringApi", "MvcStringApi\MvcStringApi.csproj", "{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreApp", "BookStoreApp\BookStoreApp.csproj", "{E086B78C-5EDD-4698-A808-76F8E8A98AF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E086B78C-5EDD-4698-A808-76F8E8A98AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E086B78C-5EDD-4698-A808-76F8E8A98AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E086B78C-5EDD-4698-A808-76F8E8A98AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E086B78C-5EDD-4698-A808-76F8E8A98AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
