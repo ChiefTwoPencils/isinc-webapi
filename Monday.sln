@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseDemo", "HouseDemo\Hous
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateHouse", "ValidateHouse\ValidateHouse.csproj", "{5E3ADA3A-340B-4523-BB38-276527A2D21D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMortgage", "ApiMortgage\ApiMortgage.csproj", "{274B5190-488E-4E23-BE7C-A56B837C6BB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5E3ADA3A-340B-4523-BB38-276527A2D21D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E3ADA3A-340B-4523-BB38-276527A2D21D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E3ADA3A-340B-4523-BB38-276527A2D21D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{274B5190-488E-4E23-BE7C-A56B837C6BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{274B5190-488E-4E23-BE7C-A56B837C6BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{274B5190-488E-4E23-BE7C-A56B837C6BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{274B5190-488E-4E23-BE7C-A56B837C6BB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

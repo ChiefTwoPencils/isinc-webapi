@@ -23,6 +23,17 @@
                 }
             });
         }
+
+        function calcRoute() {
+            var Amount = $('#txtAmount').val();
+            var Rate = $('#txtRate').val();
+            var Years = $('#txtYears').val();
+            var url = 'mortgage/' + Amount + '/' + Rate + '/' + Years;
+            $.getJSON(url)
+                .done(function (result) {
+                    $("#result").text(result);
+                });
+        }
     </script>
 </head>
 <body>
@@ -35,6 +46,7 @@
 
     <div>
         <input type="button" value="Calculate" onclick="calc();" />
+        <input type="button" value="Calculate Using Route" onclick="calcRoute();" />
         <p />
         Monthly Payment: <span id="result" />
    </div>
