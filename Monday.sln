@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringApi", "StringApi\Stri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiHouses", "ApiHouses\ApiHouses.csproj", "{8684D829-4B01-441A-A951-E1FF6E74DA22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseDemo", "..\..\..\..\Desktop\MVC Class Files\WebApiCs\Chap04\HouseDemo\Step1\HouseDemo\HouseDemo.csproj", "{6BB143FD-16E1-4D13-9399-E55D74BC297E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseDemo", "HouseDemo\HouseDemo.csproj", "{6BB143FD-16E1-4D13-9399-E55D74BC297E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

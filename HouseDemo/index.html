@@ -1,0 +1,151 @@
+﻿<!--- Any minor change -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>House App</title>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        var uri = 'api/houses';
+
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of houses.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<li>', { text: formatItem(item) }).appendTo($('#houses'));
+                    });
+                });
+        });
+
+        function refresh() {
+            clearList();
+            $.ajax({
+                url: 'api/houses',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<li>', { text: formatItem(item) }).appendTo($('#houses'));
+                    });
+                },
+                error: function (jqXHR, textStatus, err) {
+                    alert(jqXHR + '\n' + textStatus + '\n' + err);
+                }
+            });
+        }
+
+        function add() {
+            var house = {
+                Id: 0,
+                City: $('#txtCity').val(),
+                Price: $('#txtPrice').val()
+            };
+            $.ajax({
+                url: 'api/houses',
+                type: 'POST',
+                data: JSON.stringify(house),
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                },
+                error: function (jqXHR, textStatus, err) {
+                    alert(jqXHR + '\n' + textStatus + '\n' + err);
+                }
+            });
+        }
+
+        function clearList() {
+            $("#houses").html("");
+        }
+
+        function formatItem(item) {
+            return '[' + item.Id + '] ' + item.City + ': $' + item.Price;
+        }
+
+        function find() {
+            var id = $('#houseId').val();
+            $.ajax({
+                url: 'api/houses' + '/' + id,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $('#house').text(formatItem(data));
+                },
+                error: function (jqXHR, textStatus, err) {
+                    $('#house').text('Error: ' + err);
+                }
+            });
+        }
+
+        function updateHouse() {
+            var id = $("#houseId").val();
+            var house = {
+                Id: id,
+                City: $("#txtCity").val(),
+                Price: $("#txtPrice").val()
+            };
+
+            $.ajax({
+                url: "api/houses/" + id,
+                type: "PUT",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify(house),
+                success: function (data) {
+                    alert("House Updated");
+                    refresh();
+                },
+                error: function (jqXHR, textStatus, err) {
+                    $("#house").text("Error: " + err);
+                }
+            });
+            alert(formatItem(house));
+        }
+
+        function deleteHouse() {
+            var id = $("#houseId").val();
+
+            $.ajax({
+                url: "api/houses/" + id,
+                type: "DELETE",
+                contentType: "application/json;charset=utf-8",
+                data: JSON.stringify(house),
+                success: function (data) {
+                    alert("House Deleted");
+                    refresh();
+                },
+                error: function (jqXHR, textStatus, err) {
+                    $("#house").text("Error: " + err);
+                }
+            });
+            alert(formatItem(house));
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>All Houses</h2>
+        <ul id="houses" />
+    </div>
+
+    <div>
+        <h2>Find by ID</h2>
+        <input type="text" id="houseId" size="5" />
+        <input type="button" value="Find" onclick="find();" />
+        <input type="button" value="Refresh" onclick="refresh();" />
+        <input type="button" value="Add" onclick="add();" />
+        <input type="button" value="Update" onclick="updateHouse();" />
+        <input type="button" value="Delete" onclick="deleteHouse();" />
+        <p id="house" />
+    </div>
+
+    <div>
+        <h2>New/Updated House Data</h2>
+        City: <input type="text" id="txtCity" size="20" /><br />
+        Price: <input type="text" id="txtPrice" size="10" /><br />
+    </div>
+
+</body>
+</html>
