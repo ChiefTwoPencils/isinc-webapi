@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateHouse", "ValidateHo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMortgage", "ApiMortgage\ApiMortgage.csproj", "{274B5190-488E-4E23-BE7C-A56B837C6BB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringApiClient", "StringApiClient\StringApiClient.csproj", "{D9CB4B4E-C10F-49AF-A74F-4004F2897C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcStringApi", "MvcStringApi\MvcStringApi.csproj", "{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{274B5190-488E-4E23-BE7C-A56B837C6BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{274B5190-488E-4E23-BE7C-A56B837C6BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{274B5190-488E-4E23-BE7C-A56B837C6BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9CB4B4E-C10F-49AF-A74F-4004F2897C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9CB4B4E-C10F-49AF-A74F-4004F2897C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9CB4B4E-C10F-49AF-A74F-4004F2897C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9CB4B4E-C10F-49AF-A74F-4004F2897C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC01C06E-7F2A-483F-BDBC-1C7B6174B25D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
